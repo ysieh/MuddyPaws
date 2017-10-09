@@ -1,0 +1,84 @@
+/*********** BODY ************/
+body {
+	margin: 0;
+    color: black;
+    font-family: 'Pacifico', cursive;
+    background-color: mediumaquamarine;
+}
+
+/*********** HEADER AND NAV BAR ************/
+header {
+	background-color: pink;
+	text-align: center;
+    padding: 10px;
+    background-color: teal;
+    color: white;
+}
+
+h1 {
+	text-align: center;
+	background-color: teal;
+	padding: 10px;
+	color: white;
+}
+
+h2 {
+	text-align: center;
+	color: black;
+}
+
+header a {
+    text-decoration: none;
+    color: gold;
+}
+
+nav {
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
+
+/*********** IMAGE AND INFO ************/
+#images {
+	margin--left: 50px;
+}
+#images img {
+	height: 300px;
+	width: 300px;
+	float: left;
+	padding-left: 150px;
+	padding-top: 0px;
+	padding-right: 150px;
+}
+
+/* Home page information */
+#home-info {
+	text-align: center;
+}
+
+#home-img {
+	display: block;
+	margin: auto;
+	width: 40%;
+}
+
+/* Merch page information */
+.merch-img {
+	display: block;
+	margin: auto;
+	width: 60%;
+}
+
+.merch-img img {
+	float: left;
+	width: 400px;
+	height: 400px;
+}
+
+.icons {
+	display:inline-block;
+	width: 300px;
+	height: 300px;
+}
