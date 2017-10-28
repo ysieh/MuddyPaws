@@ -7,32 +7,54 @@
     <!-- styles -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
-    	@import url('https://fonts.googleapis.com/css?family=Pacifico');
+        @import url('https://fonts.googleapis.com/css?family=Teko');
     </style>
 
     <!--font-->
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+    <!-- javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="cart.js" type="text/javascript"></script>
+    <script src="wishlist.js" type="text/javascript"></script>
+
 </head>
 
 <body>
 	<!--header and nav bar-->
-    <header>
-    	<h1>Muddy Paws Adventure Gear</h1>
-    	<nav>
-        	<a href="home.html">Home</a> -
-        	<a href="merch.html">Merchandise</a>
-    	</nav>
-    </header>
+
+    <div class="header">
+
+        <div class="container">
+
+            <div class="logo">
+                <h1><a href="home.html">Muddy Paws Adventure Gear</h1>
+            </div>
+
+            <div class="nav">
+                <ul>
+                    <li><a href="home.html">About</a></li>
+                    <li class="divider">|</li>
+                    <li><a href="merch.html">Shop</a></li>
+                    <li class="divider">|</li>
+                    <li id="cartValue">0</li>
+                    <li><a href="shoppingcart.html"><img src="images/carticon.png"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     
     <!--homepage specific information-->
     <div class="home">
-    	<div id="home-info">
-    		<h2 class="home-title">About us</h2>
-    		<p>Welcome to Muddy Paws Adventure Gear! We are committed to helping all cats and dogs live to their full potential, experiencing the wild alongside their human and hiker pals.</p>
-    	</div>
+    	
     	<div id="home-img">
-    		<img src="https://static.boredpanda.com/blog/wp-content/uploads/2016/07/camping-with-cats-ryan-carter-54-579209187b25b__605.jpg">
+    		<img src="http://www.fairytailsdaycare.com/images/dog_banner.jpg">
     	</div>
+        <div id="home-info">
+            <h2 class="home-title">About us</h2>
+            <p>Welcome to Muddy Paws Adventure Gear! We are committed to helping all cats and dogs live to their full potential, experiencing the wild alongside their human and hiker pals.</p>
+        </div>
 </body>
 
 </html>

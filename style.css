@@ -1,56 +1,76 @@
 /*********** BODY ************/
 body {
-	margin: 0;
-    color: black;
-    font-family: 'Pacifico', cursive;
-    background-color: mediumaquamarine;
-}
-
-/*********** HEADER AND NAV BAR ************/
-header {
-	background-color: pink;
-	text-align: center;
-    padding: 10px;
-    background-color: teal;
-    color: white;
-}
-
-h1 {
-	text-align: center;
-	background-color: teal;
-	padding: 10px;
-	color: white;
-}
-
-h2 {
-	text-align: center;
-	color: black;
-}
-
-header a {
-    text-decoration: none;
-    color: gold;
-}
-
-nav {
-	text-align: center;
+	margin-top: 166px;
+	margin-left: 0px;
+	margin-right: 0px;
+	width: 100%;
+    font-family: 'Teko', sans-serif;
+    background-color: #EAFAF1;
 }
 
 p {
-	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	font-size: 25px;
 }
 
-/*********** IMAGE AND INFO ************/
-#images {
-	margin--left: 50px;
+/*********** HEADER AND NAV BAR ************/
+.header {
+	background-color: mediumaquamarine;
+	font-size: 30px;
+	width: 100%;
+	top: 0;
+	position: fixed;
 }
-#images img {
+
+.container {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.nav{
+	float: right;
+}
+
+.nav img {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+}
+
+.logo {
+	float: left;
+}
+
+li {
+	list-style: none;
+	float: left;
+	margin-left: 15px;
+	text-decoration: none;
+	padding-top: 20px;
+	display: inline;
+	font-size: 30px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+
+/*********** IMAGE AND INFO ************/
+
+.images {
+	margin-left: 100px;
+	margin-right: 100px;
+	float:left;
+}
+.images img {
 	height: 300px;
 	width: 300px;
-	float: left;
-	padding-left: 150px;
+	display:inline-block;
 	padding-top: 0px;
-	padding-right: 150px;
+	border-radius: 5px;
 }
 
 /* Home page information */
@@ -58,27 +78,122 @@ p {
 	text-align: center;
 }
 
-#home-img {
-	display: block;
-	margin: auto;
-	width: 40%;
+#home-img img {
+	width:100%;
+	height:auto;
 }
 
 /* Merch page information */
+
+.products {
+	margin-top:166px;
+}
+
+.products h2, p{
+	text-align: center;
+	padding-top: 30px;
+}
+
 .merch-img {
-	display: block;
 	margin: auto;
 	width: 60%;
 }
 
 .merch-img img {
 	float: left;
+	display: inline-block;
+	margin: 20px;
 	width: 400px;
 	height: 400px;
+	border-radius: 5px;
 }
 
-.icons {
-	display:inline-block;
-	width: 300px;
-	height: 300px;
+
+/* Detail pages information */
+
+.info {
+	float: left;
+	display: inline-block;
+}
+
+.btn-group-1 button {
+	background-color: #4CAF50;
+    border: 1px solid green;
+    color: white;
+    padding: 10px 24px; 
+    cursor: pointer; 
+    float: left; 
+}
+
+.btn-group-1 button:not(:last-child) {
+    border-right: none; 
+}
+
+.btn-group-1:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.btn-group-1 button:hover {
+    background-color: #3e8e41;
+}
+
+.btn-group-2 button {
+	background-color: #4CAF50;
+    border: 1px solid green; 
+    color: white; 
+    padding: 10px 24px; 
+    cursor: pointer;
+    float: left; 
+}
+
+.btn-group-2 button:not(:last-child) {
+    border-right: none;
+}
+
+.btn-group-2:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.btn-group-2 button:hover {
+    background-color: #3e8e41;
+}
+
+/* Cart page */
+.cartList {
+	padding-left: 100px;
+	padding-right: 50px;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	font-size: 30px;
+	display: inline-block;
+	float: left;
+}
+
+.cartList li {
+	padding: 0px;
+	margin: 0px;
+	padding-right: 25px;
+
+}
+
+.wishList {
+	padding-left: 50px;
+	padding-right: 300px;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	font-size: 30px;
+	display: inline-block;
+	float: right;
+}
+
+.cartInfo h3 {
+	margin: 0;
+}
+
+.cartInfo button {
+	margin-bottom: 50px;
 }

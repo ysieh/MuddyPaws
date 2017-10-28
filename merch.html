@@ -6,40 +6,56 @@
 
     <!-- styles -->
     <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Teko');
+    </style>
 
-     <!--font-->
-     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+    <!-- javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="cart.js" type="text/javascript"></script>
+    <script src="wishlist.js" type="text/javascript"></script>
+
 </head>
 
 <body>
     <!--header and nav bar-->
-    <header>
-    	<h1>Muddy Paws Adventure Gear</h1>
-    	<nav>
-            <a href="home.html">Home</a> -
-            <a href="merch.html">Merchandise</a>
-        </nav>
-    </header>
+
+    <div class="header">
+
+        <div class="container">
+
+            <div class="logo">
+                <h1><a href="home.html">Muddy Paws Adventure Gear</h1>
+            </div>
+
+            <div class="nav">
+                <ul>
+                    <li><a href="home.html">About</a></li>
+                    <li class="divider">|</li>
+                    <li><a href="merch.html">Shop</a></li>
+                    <li class="divider">|</li>
+                    <li id="cartValue">0</li>
+                    <li><a href="shoppingcart.html"><img src="images/carticon.png"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     
     <!--merch page specific information-->
-    <h2>Merchandise</h2>
-    <p>Click on product categories to learn more.<p>
-    <div id="images">
-        <a href="details1.html" class="icons">
-            <img src="https://images-na.ssl-images-amazon.com/images/I/5112vefCgkL._SL500_AC_SS350_.jpg">
-        </a>
-
-        <a href="details2.html" class="icons">
-            <img src="http://albanianjournalism.com/wp-content/uploads/2013/06/Dog-Harness.jpg">
-        </a>
-
-        <a href="details3.html" class="icons">
-            <img src="https://i.pinimg.com/564x/a9/d9/a0/a9d9a042dd95c50269672e70a1ba5958.jpg">
-        </a>
-
-        <a href="details4.html" class="icons">
-            <img src="http://gadgetsandwearables.com/wp-content/uploads/2016/07/Tractive-GPS-Pet-Tracker-e1468601979473.jpg">
-        </a>
+    <div class="products">
+        <h2>Merchandise</h2>
+        <p>Click on product categories to learn more.</p>
+        <div class="images">
+            <ul>
+                <li id="catHarness"><a href="details1.html"><img src="https://images-na.ssl-images-amazon.com/images/I/5112vefCgkL._SL500_AC_SS350_.jpg"></a></li>
+                <li id="dogHarness"><a href="details2.html"><img src="http://albanianjournalism.com/wp-content/uploads/2013/06/Dog-Harness.jpg"></a></li>
+                <li id="harnessStorage"><a href="details3.html"><img src="https://i.pinimg.com/564x/a9/d9/a0/a9d9a042dd95c50269672e70a1ba5958.jpg"></a></li>
+                <li id="petGPS"><a href="details4.html"><img src="http://gadgetsandwearables.com/wp-content/uploads/2016/07/Tractive-GPS-Pet-Tracker-e1468601979473.jpg"></a></li>
+            </ul>
+        </div>
     </div>
 </body>
 
