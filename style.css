@@ -1,3 +1,5 @@
+/** style.css, PUI Assignment 4, ysieh ***/
+
 /*********** BODY ************/
 body {
 	margin-top: 166px;
@@ -73,7 +75,7 @@ a {
 	border-radius: 5px;
 }
 
-/* Home page information */
+/*********** HOME PAGE ***********/
 #home-info {
 	text-align: center;
 }
@@ -83,7 +85,7 @@ a {
 	height:auto;
 }
 
-/* Merch page information */
+/*********** ALL MERCHANDISE PAGE ***********/
 
 .products {
 	margin-top:166px;
@@ -109,13 +111,13 @@ a {
 }
 
 
-/* Detail pages information */
-
+/*********** ITEM DETAIL PAGES ***********/
 .info {
 	float: left;
 	display: inline-block;
 }
 
+/* Button Group 1 is for size selection*/
 .btn-group-1 button {
 	background-color: #4CAF50;
     border: 1px solid green;
@@ -139,6 +141,7 @@ a {
     background-color: #3e8e41;
 }
 
+/* Button Group 2 is for color selection*/
 .btn-group-2 button {
 	background-color: #4CAF50;
     border: 1px solid green; 
@@ -162,7 +165,18 @@ a {
     background-color: #3e8e41;
 }
 
-/* Cart page */
+/*********** SHOPPING CART PAGE ***********/
+
+/* For both Cart and Wishlist */
+.cartInfo h3 {
+	margin: 0;
+}
+
+.cartInfo button {
+	margin-bottom: 50px;
+}
+
+/* For cart only */
 .cartList {
 	padding-left: 100px;
 	padding-right: 50px;
@@ -180,6 +194,7 @@ a {
 
 }
 
+/* For wishlist only */
 .wishList {
 	padding-left: 50px;
 	padding-right: 300px;
@@ -190,10 +205,3 @@ a {
 	float: right;
 }
 
-.cartInfo h3 {
-	margin: 0;
-}
-
-.cartInfo button {
-	margin-bottom: 50px;
-}

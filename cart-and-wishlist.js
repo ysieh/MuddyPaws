@@ -49,12 +49,44 @@ function updateCartText(cart){
     }
 }
 
+/* Update the text that appears in the wishlist */
+function updateWishlistText(wishlist){
+    // For every item in the wishlist, create list item strings and a remove button with the item details
+    // Then, append each of these list items and the button to the cartList class for cart.html
+    var len = wishlist.length;
+    for (let i=0; i<len; i++) {
+        var wishStringType =  wishlist[i].type;
+        var wishStringSize = "Size: " + wishlist[i].size;
+        var wishStringColor = "Color: " + wishlist[i].color;
+        var wishStringQuantity = "Quantity: " + (wishlist[i].count).toString();
+        
+        var txt1 = $("<h3></h3>").text(wishStringType);
+        var txt2 = $("<li></li>").text(wishStringSize);
+        var txt3 = $("<li></li>").text(wishStringColor);
+        var txt4 = $("<li></li>").text(wishStringQuantity);
+        var button = $("<button>Remove Item</button>");
+        $(".wishList").append(txt1, txt2, txt3, txt4, button);
+
+        // Making button attributes and functions
+        // Remove items from the wishlist by splicing them out and storing the new wishlist in sessionStorage
+        $(button).attr("id", 'removeButton' + i);  
+        $(button).addClass("removeButton");
+
+        $(button).on('click', function(){
+            wishlist.splice(i, 1);
+            sessionStorage.setItem("wishlist", JSON.stringify(wishlist));
+            location.reload();
+        });   
+    }
+}
+
 /*** Global Variables ***/
 var type = ["catHarness", "dogHarness", "harnessStorage", "petGPS"];
 var sizes = ["tiny", "small", "medium", "large"];
 var colors = ["strawberry", "blackberry", "crazyberry", "camouflage", "nightMoon", "fireOrange"]; 
 // Make an empty global list
 var cart = [];
+var wishlist = [];
 
 /*** Document Load ***/
 $(document).ready(function() {
@@ -62,13 +94,21 @@ $(document).ready(function() {
     savedCart = JSON.parse(sessionStorage.getItem("cart"));
     if (savedCart == null){
         cart = [];
-    }
-    else {
+    }else {
         cart = savedCart;
         $("#cartList").text(updateCartText(cart));
     }
 
     $("#cartValue").text(updateCart(cart)); 
+
+    savedWishlist = JSON.parse(sessionStorage.getItem("wishlist"));
+    if (savedWishlist == null){
+        wishlist = [];
+    }else {
+        wishlist = savedWishlist;
+        $("#wishList").text(updateWishlistText(wishlist));
+    }
+
     var i = 0;
     var len = cart.length;
      
@@ -171,6 +211,38 @@ $(document).ready(function() {
         /* Save cart to session storage */
         jsonCart = JSON.stringify(cart);
         sessionStorage.setItem("cart", jsonCart);
+    });
+
+
+    $("#add-to-wish").click(function(){
+        /* First check if the current item is already in the cart */
+        newItem = true;
+        currItem = new Item(currType, currSize, currColor, 1);
+        if (wishlist.length==0) {
+            wishlist.push(currItem);
+        }
+        else {
+            let len = wishlist.length
+            for (let j = 0; j<len; j++){
+                /* If it is in the cart, add one to its count */
+                if (wishlist[j].type == currItem.type && 
+                    wishlist[j].size == currItem.size && 
+                    wishlist[j].color == currItem.color) {
+                    wishlist[j].count = wishlist[j].count + 1;
+                    newItem = false;
+                }
+            }
+            /* If it's not in the cart, add the item to the cart*/
+            if (newItem){
+                wishlist.push(currItem);
+            }
+        }
+        /* Update cart number */
+        $("#wishList").text(updateWishlistText(wishlist));
+
+        /* Save cart to session storage */
+        jsonWishlist = JSON.stringify(wishlist);
+        sessionStorage.setItem("wishlist", jsonWishlist);
     });
 
 });
